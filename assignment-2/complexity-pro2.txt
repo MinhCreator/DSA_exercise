@@ -1,0 +1,29 @@
+a, addition
+    for (i = 0; i < n; i++) time: n
+        for (j = 0; j < n; j++) time: n
+            a[i][j] = b[i][j] + c[i][j]; time: n * n
+=> O(n^2)
+
+b, Multiplication 
+for(i = 0; i < n; i++) time: n
+{ 
+  for(j = 0; j < n; j++) time: n
+  { 
+    sum = 0; 
+    for(k = 0; k < n; k++) time: n
+      sum = sum + b[i][k] * c[k][j]; 
+    a[i][j] = sum; 
+  } 
+}
+=> O(n^3)           
+
+c, Transposition
+    for(i = 0; i < n - 1; i++) time: n
+        for(j = i + 1; j < n; j++) time: n
+        {
+            tmp = a[i][j];
+            a[i][j] = a[j][i];
+            a[j][i] = tmp;
+        }
+
+=> O(n^2)

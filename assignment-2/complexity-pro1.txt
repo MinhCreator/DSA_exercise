@@ -1,0 +1,19 @@
+a, for (cnt1 = 0, i = 1; i <= n; i++)  cost1 time: n 
+        for (j = 1; j <= n; j++) cost2 time: n
+            cnt1++; cost3 1
+=> O(n^2)
+
+b, for (cnt2 = 0, i = 1; i <= n; i++) time: n
+        for (j = 1; j <= i; j++) time: n
+            cnt2++;
+=> O(n^2)
+
+c, for (cnt3 = 0, i = 1; i <= n; i *= 2) time: n/2 
+        for (j = 1; j <= n; j++) time: n
+            cnt3++;
+=> O(log2n)
+
+d, for (cnt4 = 0, i = 1; i <= n; i *= 2) time: n/2 
+        for (j = 1; j <= i; j++) time: n
+            cnt4++;
+=> O(log2n) 
